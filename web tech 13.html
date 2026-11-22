@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Student Information System</h1>
+    <p>Academic Task Manager</p>
+</header>
+
+<nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#taskForm">Add Task</a>
+    <a href="#taskList">My Tasks</a>
+</nav>
+
+<main>
+    <section id="dashboard">
+        <h2>Student Dashboard</h2>
+        <p>Manage your assignments, projects and academic activities.</p>
+    </section>
+
+    <section id="taskForm">
+        <h2 id="formTitle">Add New Academic Task</h2>
+
+        <form id="taskFormElement">
+            <input type="text" id="taskName"
+                placeholder="Enter task name" required>
+
+            <textarea id="description"
+                placeholder="Enter task description" required></textarea>
+
+            <select id="subject" required>
+                <option value="">Select Subject</option>
+                <option value="Web Technology">Web Technology</option>
+                <option value="C Programming">C Programming</option>
+                <option value="Digital System Design">Digital System Design</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Constitution of India">Constitution of India</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <input type="date" id="dueDate" required>
+
+            <select id="status">
+                <option value="Pending">Pending</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+            </select>
+
+            <button type="submit" id="submitBtn">Add Task</button>
+            <button type="button" id="cancelBtn" hidden>Cancel Edit</button>
+        </form>
+    </section>
+
+    <section id="taskList">
+        <h2>My Academic Tasks</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task Name</th>
+                        <th>Description</th>
+                        <th>Subject</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="taskTable">
+                </tbody>
+            </table>
+        </div>
+
+        <p id="taskCount">Total Tasks: 0</p>
+    </section>
+</main>
+
+<footer>
+    <p>Student Information System | Academic Task Manager</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
